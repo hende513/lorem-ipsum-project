@@ -6,10 +6,29 @@ html {
   *::after {
     box-sizing: inherit;
   }
+  /* Set color Variables */
+  :root {
+    --background: hsl(204, 38%, 18%);
+    --lighter-background:hsl(204, 38%, 30%);
+    --text:hsl(204, 38%, 97%);
+    --primary:hsl(208, 57%, 65%);
+    --accent:hsl(220, 67%, 45%);
+    --other-accent:hsl(240, 71%, 67%);
+    --link-hover:hsl(214, 100%, 75%);
+
+  }
 body {
     font-size: 125%;
     margin: 0;
     padding: 0;
+    background-color: var(--background);
+    color: var(--text);
+}
+a:link,a:visited {
+    color: hsl(214, 66%, 57%);
+}
+a:hover {
+    color:var(--link-hover);
 }
 
 /* Style the Banner*/
@@ -26,11 +45,11 @@ header section {
     padding: 1rem;
 }
 header section h1 {
-    color:aliceblue;
+    color:var(--text);
     font-size: 2.2em;
 }
 header section p {
-    color:aliceblue;
+    color:var(--text);
     font-size: 1.2em;
 }
 
@@ -46,7 +65,7 @@ header section p {
     float: right;
     width: 350px;
     padding: 0.5em;
-    border: 2px solid#336699;
+    border: 2px solid var(--accent);
     margin: 0 0 0 1em;
 }
 .box-right img {
@@ -54,4 +73,8 @@ header section p {
 }
 .clear-float {
     clear: both;
+}
+
+footer {
+    background-color: var(--lighter-background);
 }
