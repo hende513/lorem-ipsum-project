@@ -23,6 +23,14 @@ body {
     padding: 0;
     background-color: var(--background);
     color: var(--text);
+    font-family: 'Hind', sans-serif;
+    line-height: 1.35;
+}
+h1,h2,h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+p {
+    max-width: 50rem;
 }
 a:link,a:visited {
     color: hsl(214, 66%, 57%);
@@ -77,4 +85,5 @@ header section p {
 
 footer {
     background-color: var(--lighter-background);
+    padding: 0.2em 0;
 }
