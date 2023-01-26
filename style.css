@@ -9,6 +9,7 @@ html {
   /* Set color Variables */
   :root {
     --background: hsl(204, 38%, 18%);
+    --header-section-bg: hsla(204, 38%, 97%, 10%);
     --lighter-background:hsl(204, 38%, 30%);
     --text:hsl(204, 38%, 97%);
     --primary:hsl(208, 57%, 65%);
@@ -33,10 +34,13 @@ p {
     max-width: 50rem;
 }
 a:link,a:visited {
-    color: hsl(214, 66%, 57%);
+    color: var(--other-accent);
 }
 a:hover {
     color:var(--link-hover);
+}
+a:active, a:focus {
+    color: chartreuse;
 }
 
 /* Style the Banner*/
@@ -48,9 +52,16 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: -20px;
+    position: relative;
 }
 header section {
     padding: 1rem;
+    position: absolute;
+    width: 33rem;
+    left: 2rem;
+    bottom: 2rem;
+    background-color: var(--header-section-bg);
+    border-radius: 16px;
 }
 header section h1 {
     color:var(--text);
@@ -60,7 +71,9 @@ header section p {
     color:var(--text);
     font-size: 1.2em;
 }
-
+h2.centered-main {
+    padding-top: 4rem;
+}
 /*Center the centered main class*/
 .centered-main {
     width: 70%;
@@ -74,7 +87,8 @@ header section p {
     width: 350px;
     padding: 0.5em;
     border: 2px solid var(--accent);
-    margin: 0 0 0 1em;
+    margin: 0 0 1em 1em;
+    border-radius: 4px;
 }
 .box-right img {
     width: 100%;
